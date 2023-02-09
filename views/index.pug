@@ -2,4 +2,12 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  |
+  |
+  a(class='button' href='/new') Add new
+  |
+  |  
+  each message in messages 
+    h3= message.text 
+    p= message.user 
+    p= message.added

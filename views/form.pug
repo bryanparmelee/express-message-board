@@ -1,0 +1,31 @@
+extends layout 
+
+block content
+    h1= title
+
+    form(
+        role='form'
+        method='POST'
+        action='/new'
+    )
+        div.form-group
+            label(
+                for='messageText'
+            ) Message Text:
+           
+            input#message-text(
+                type='text'
+                name='messageText'
+                placeholder='Enter message'
+            )
+            label(
+                for="author"
+            ) Name:
+            input#author(
+                type='text'
+                name='author'
+                placeholder='Name'
+            )
+            button(
+                type='submit'
+            ) Submit
