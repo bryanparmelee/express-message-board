@@ -3,19 +3,19 @@ var router = express.Router();
 
 const messages =  [
   {
-    text: "Hello world!",
-    user: "Bobby",
-    added: new Date()
+    text: "Click 'Add Your Message' to join the conversation!",
+    user: "Admin",
+    added: new Date().toLocaleString()
   },
   {
     text: "I'm here!",
     user: "Sally",
-    added: new Date()
+    added: new Date().toLocaleString()
   },
   {
     text: "Allow me to introduce myself",
     user: "Billy",
-    added: new Date()
+    added: new Date().toLocaleString()
   },
 ];
 
@@ -31,7 +31,7 @@ router.get('/new', function(req, res, next) {
 router.post('/new', function(req, res, next) {
   const messageText = req.body.messageText;
   const messageUser = req.body.author;
-  messages.push({ text: messageText, user: messageUser, added: new Date() });
+  messages.push({ text: messageText, user: messageUser, added: new new Date().toLocaleString() });
   next();
   res.redirect('/');
 })
