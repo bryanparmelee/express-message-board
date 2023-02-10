@@ -31,7 +31,7 @@ router.get('/new', function(req, res, next) {
 router.post('/new', function(req, res, next) {
   const messageText = req.body.messageText;
   const messageUser = req.body.author;
-  messages.push({ text: messageText, user: messageUser, added: new new Date().toLocaleString() });
+  messages.push({ text: messageText, user: messageUser, added: new Date().toLocaleString() });
   next();
   res.redirect('/');
 })

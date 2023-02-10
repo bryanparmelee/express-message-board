@@ -4,7 +4,7 @@ block content
     div.main-container
         h1= title
 
-        form(
+        form.form-container(
             role='form'
             method='POST'
             action='/new'
@@ -14,19 +14,25 @@ block content
                     for='messageText'
                 ) Message Text:
             
-                input#message-text(
+                textarea#message-text(
+                    required 
                     type='text'
+                    rows=3
                     name='messageText'
                     placeholder='Enter message'
                 )
+            div.form-group
                 label(
                     for="author"
                 ) Name:
                 input#author(
+                    required
                     type='text'
                     name='author'
                     placeholder='Name'
                 )
-                button(
-                    type='submit'
-                ) Submit
+                
+            button(
+                class='button'
+                type='submit'
+            ) Submit
